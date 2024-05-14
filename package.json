@@ -1,0 +1,13 @@
+{
+  "name": "NewProject_2",
+  "uuid": "622e04d4-0393-4d0b-8cf3-73b2303b1064",
+  "creator": {
+    "version": "3.8.1"
+  },
+  "scripts": {
+    "proto": "protoc --proto_path=framework/networking/ --js_out=import_style=es6,binary:framework/networking/data/ protos/example.proto"
+  },
+  "devDependencies": {
+    "protobufjs": "^7.3.0"
+  }
+}

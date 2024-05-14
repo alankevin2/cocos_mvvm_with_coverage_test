@@ -1,0 +1,6 @@
+{
+    "imports": {
+        "@src/": "./assets/scripts/",
+        "@framework/": "./assets/framework/"
+    }
+}
