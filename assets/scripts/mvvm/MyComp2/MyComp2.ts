@@ -1,4 +1,4 @@
-import { _decorator, Label, Node, Sprite, SpriteFrame } from 'cc';
+import { _decorator, Label, Node, Sprite, SpriteFrame, director } from 'cc';
 import { ViewModel2 } from './ViewModel2';
 import { UseViewModel, bind, View } from 'framework/dist/output.js';
 const { ccclass, property } = _decorator;
@@ -15,6 +15,10 @@ export class MyComp2 extends View {
 
     protected start(): void {
         
+    }
+
+    buttonClicked() {
+        director.loadScene('scene');
     }
 }
 

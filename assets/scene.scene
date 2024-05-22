@@ -52,7 +52,7 @@
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 28
+      "__id__": 29
     },
     "_id": "1753ffc5-9d5b-41f6-bdb3-dbc7273dd926"
   },
@@ -94,6 +94,9 @@
       },
       {
         "__id__": 27
+      },
+      {
+        "__id__": 28
       }
     ],
     "_prefab": null,
@@ -927,7 +930,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "playOnLoad": false,
+    "playOnLoad": true,
     "_clips": [
       null
     ],
@@ -1003,30 +1006,54 @@
     "_id": "c5V1EV8IpMtrIvY1OE9t2u"
   },
   {
+    "__type__": "9eab63+qmRA9YUUW1FHi6J3",
+    "_name": "",
+    "_objFlags": 0,
+    "__editorExtras__": {},
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "__prefab": null,
+    "myLabel": {
+      "__id__": 7
+    },
+    "updateLabel": {
+      "__id__": 10
+    },
+    "mySprite": {
+      "__id__": 23
+    },
+    "myAnimation": {
+      "__id__": 24
+    },
+    "_id": "89O00+76hJCZaGiDg7AoDW"
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 29
-    },
-    "shadows": {
       "__id__": 30
     },
-    "_skybox": {
+    "shadows": {
       "__id__": 31
     },
-    "fog": {
+    "_skybox": {
       "__id__": 32
     },
-    "octree": {
+    "fog": {
       "__id__": 33
     },
-    "skin": {
+    "octree": {
       "__id__": 34
     },
-    "lightProbeInfo": {
+    "skin": {
       "__id__": 35
     },
-    "postSettings": {
+    "lightProbeInfo": {
       "__id__": 36
+    },
+    "postSettings": {
+      "__id__": 37
     },
     "bakedWithStationaryMainLight": false,
     "bakedWithHighpLightmap": false

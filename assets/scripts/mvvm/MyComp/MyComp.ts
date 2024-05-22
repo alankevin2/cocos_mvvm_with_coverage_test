@@ -29,6 +29,13 @@ export class MyComp extends View {
             count++;
             this.updateLabel.string = ''+count;
         }, 1, macro.REPEAT_FOREVER);
+
+        if (this.animation) {
+            this.myAnimation.addClip(this.animation);
+            this.scheduleOnce(() => {
+                this.myAnimation.play('animation');
+            });
+        }
     }
 
     protected onDestroy(): void {
@@ -47,11 +54,11 @@ export class MyComp extends View {
         super.modelDidChange(key, value, previousValue);
         console.log('modelDidChange start ----');
         console.log(key, value, previousValue);
-
         if (key === 'animation') {
-            this.myAnimation.play("animation");
+            if (!this.myAnimation.getState('animation').isPlaying) {
+                this.myAnimation.play('animation');
+            }
         }
-
         console.log('modelDidChange end ----');
     }
 }
