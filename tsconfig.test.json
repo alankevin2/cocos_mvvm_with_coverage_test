@@ -1,0 +1,14 @@
+{
+  "type": "node",
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "experimentalDecorators": true
+  }
+}

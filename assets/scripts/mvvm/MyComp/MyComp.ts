@@ -1,13 +1,12 @@
 import { _decorator, director, Label, macro, SpriteFrame, Sprite, AnimationClip, Animation } from 'cc';
-import { BaseComp } from '../base/BaseComp';
-import { ViewModel } from './ViewModel';
-import { bind, UseViewModel } from '../base/Decorator';
+import { ViewModel1 } from './ViewModel1';
+import { UseViewModel, bind, View } from 'framework/dist/output.js';
 
 const { ccclass, property } = _decorator;
 
 @ccclass('MyComp')
-@UseViewModel(ViewModel)
-export class MyComp extends BaseComp {
+@UseViewModel(ViewModel1)
+export class MyComp extends View {
 
     @property(Label) myLabel: Label;
     @property(Label) updateLabel: Label;

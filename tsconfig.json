@@ -5,10 +5,10 @@
   /* Add your custom configuration here. */
   "compilerOptions": {
     "strict": false,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@src/*": ["assets/scripts/*"],
-      "@framework/*": ["assets/framework/*"]
-    }
+    },
+    "esModuleInterop": true
   }
 }

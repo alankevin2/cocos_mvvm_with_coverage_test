@@ -27,22 +27,9 @@ class MyView extends BaseComp {
 此外，由於ViewModel需要在Component onLoad前就需要先建立起來，否則等場景或prefab載好時，ViewModel才跟著一起被創建，這樣極有可能會錯過具有realtime性質的資料（ex: websocket stream）
 我們透過@UseViewModel這個Decorator 來提前創建，並且跟這個Component做綁定（即使Component還沒實際被new出來）
 
-# 安裝protocol buffer compiler CLI (OSX/MacOS)
 
+# 跑jest要注意的部分
+由於我們使用pnpm來安裝自己的framework於 node_modules中，這個情況下要測試的案例有依賴它的話，必須額外安裝
 ```
-brew install protobuf
-```
-以及
-```
-npm i -g protobufjs
-```
-
-```
-npm install -g protoc-gen-js
-```
-
-# protobuf生成的 *_pb.js 要記得到cocos creator全局配置的資源數據庫-忽略文件上補上
-
-```
-!**/*_pb.js
+pnpm babel-jest @babel/core @babel/preset-env
 ```

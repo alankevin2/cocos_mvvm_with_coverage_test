@@ -1,4 +1,4 @@
-import { Networking } from '@framework/networking/src/Networking';
+import { Networking } from 'framework/dist/output.js';
 import { _decorator, Component, Node } from 'cc';
 
 @_decorator.ccclass('Entry')

@@ -1,10 +1,8 @@
 import { _decorator, Component, Node } from 'cc';
-import { UseViewModel } from '@src/mvvm/base/Decorator';
-import { BaseViewModel } from '@src/mvvm/base/BaseViewModel';
+import { ViewModel } from 'framework/dist/output.js';
 const { ccclass, property } = _decorator;
 
-
-class SSSS extends BaseViewModel {
+class SSSS extends ViewModel {
 
 }
 
