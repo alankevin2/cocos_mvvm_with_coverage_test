@@ -1,6 +1,7 @@
 import { AnimationClip, ImageAsset, SpriteFrame, Texture2D, absMaxComponent, resources } from 'cc';
 import { ViewModel, bindable, EventDispatcher, NetworkingEvents, encodePerson, decodePerson } from 'framework/dist/output.js';
 import PersonModel from '@src/model/microevent/Person';
+import { EDITOR } from 'cc/env';
 export class ViewModel1 extends ViewModel {
 
     @bindable someString: string;
@@ -30,6 +31,9 @@ export class ViewModel1 extends ViewModel {
     }
 
     private onReceived(data: any) {
+        if (EDITOR) {
+            return;
+        }
         if (data.name == 'This is data1') {
             this.someString = data.name;
             this.someBool = false;

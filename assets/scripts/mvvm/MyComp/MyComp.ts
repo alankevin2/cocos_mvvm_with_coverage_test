@@ -1,6 +1,6 @@
 import { _decorator, director, Label, macro, SpriteFrame, Sprite, AnimationClip, Animation } from 'cc';
 import { ViewModel1 } from './ViewModel1';
-import { UseViewModel, bind, View } from 'framework/dist/output.js';
+import { UseViewModel, bind, View } from 'framework';
 
 const { ccclass, property } = _decorator;
 
@@ -10,8 +10,10 @@ export class MyComp extends View {
 
     @property(Label) myLabel: Label;
     @property(Label) updateLabel: Label;
-    @property(Sprite) mySprite: Sprite
-    @property(Animation) myAnimation: Animation
+    @property(Sprite) mySprite: Sprite;
+    @property(Animation) myAnimation: Animation;
+    @property(Sprite) lighting: Sprite;
+    @property(Sprite) wave: Sprite;
 
     @bind('this.myLabel.string') someString: string;
     @bind('this.mySprite.spriteFrame') someSpriteFrame: SpriteFrame
@@ -20,11 +22,11 @@ export class MyComp extends View {
 
     someString1: number = 123;
     someObj: object = {};
+    time: number = 0;
 
     protected onLoad(): void {
         super.onLoad();
         let count = 0;
-
         this.schedule(() => {
             count++;
             this.updateLabel.string = ''+count;
@@ -36,6 +38,15 @@ export class MyComp extends View {
                 this.myAnimation.play('animation');
             });
         }
+
+        console.log(this.lighting.customMaterial);
+        console.log(this.lighting.spriteFrame.texture);
+    }
+
+    protected update(dt): void {
+        this.time += dt;
+        this.lighting.customMaterial.setProperty('time', this.time);
+        this.wave.customMaterial.setProperty('time', this.time);
     }
 
     protected onDestroy(): void {
